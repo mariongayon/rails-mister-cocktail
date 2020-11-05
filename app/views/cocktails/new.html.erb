@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row p-3 m-3 bg-ligh">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1 justify-content-center">
+      <h2>New cocktail</h2>
+      <%= simple_form_for @cocktail do |f| %>
+        <%= f.input :name, input_html: { autocomplete: 'off' } %>
+          <%= link_to 'Cancel', cocktails_path, class: 'btn btn-outline-secondary' %>
+        <%= f.submit "Save cocktail", class: "btn btn-dark" %>
+      <% end %>
+      <br>
+      <%= link_to "Go back to cocktails", cocktails_path  %>
+    </div>
+  </div>
+</div>
